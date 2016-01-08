@@ -1,0 +1,77 @@
+Step-by-Step Git Commands:
+
+When starting a new project and making commits from the command line(in Git)
+
+By Michael Avnyin 
+
+1) First open your command line and type: git and hit enter/return to check if you have everything properly installed.
+	
+	- You should see a list something like this:
+		 usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+			The most commonly used git commands are:
+ 			add        Add file contents to the index
+  			bisect     Find by binary search the change that introduced a bug
+   			branch     List, create, or delete branches
+   			checkout   Checkout a branch or paths to the working tree
+   			clone      Clone a repository into a new directory
+   			commit     Record changes to the repository
+  			diff       Show changes between commits, commit and working tree, etc
+   			fetch      Download objects and refs from another repository
+   			grep       Print lines matching a pattern
+   			init       Create an empty Git repository or reinitialize an existing one
+   			log        Show commit logs
+   			merge      Join two or more development histories together
+   			mv         Move or rename a file, a directory, or a symlink
+   			pull       Fetch from and integrate with another repository or a local branch
+   			push       Update remote refs along with associated objects
+   			rebase     Forward-port local commits to the updated upstream head
+   			reset      Reset current HEAD to the specified state
+   			rm         Remove files from the working tree and from the index
+   			show       Show various types of objects
+   			status     Show the working tree status
+   			tag        Create, list, delete or verify a tag object signed with GPG
+
+			'git help -a' and 'git help -g' list available subcommands and some
+			concept guides. See 'git help <command>' or 'git help <concept>'
+			to read about a specific subcommand or concept.
+
+2) We now need to create a new directory.
+	
+	- From the command line type pwd (then hit enter/return) to see your current working directory (location of were you are)
+	- To navigate to another directory type in the command line: cd NameOfDirectory/ (were NameOfDirectory can be any folder that exists on your computer)
+		For example on my mac I type: cd Documents/
+		Hit enter/return key(which takes me to my Documents folder)
+	- Now that I'm in the current working directory (Documents) I can now create a new directory in the Documents folder. (type pwd to make sure you are in Documents or whatever directory you chose)
+		Type in the command line: mkdir newGitFolder then hit "enter/return key" (newGitFolder is an arbitrary name you can name your directory anything)
+		If you have no errors you have successfully created a new directory.
+		To navigate into your new directory type: cd newGitFolder (or whatever name you made the new directory)
+		Type pwd to check if you are in the current directory you wish to be in.
+		
+3) We now need to add some files to our new directory
+
+	- We can use the touch command to create new files.
+		Go to the command line type pwd to make sure you are in the right directory and then type: touch index.html
+		This will create a new blank html file stored in your newly created directory.
+		Go ahead and create another type: touch style.css
+		This creates a CSS file in your current directory.
+		If you type: ls (you will see the two files you just created)
+		
+4)	Now that we created a new directory to store our newly created files we need to add and commit them.
+	
+	- Before we do anything we must type: git init (in our new directory to create a repository)
+		Type: git status ( if we do not receive any errors we have properly set up a repository locally)
+	- Now we want to add our .html and .css files.
+		We can achieve this by typing: git add . (or we can add each file individually) by typing: git add index.html (then) git add style.css
+	- Now we can commit our files by doing the following
+		Type: git commit -m "Type a descriptive message here to what you are committing"
+	- If all has worked you can type 
+		git status
+		git log
+		to check out any changes made.
+	- It is good practice to type git status after every git command you execute.
+		
