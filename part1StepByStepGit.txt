@@ -61,7 +61,7 @@ By Michael Avnyin
 		This creates a CSS file in your current directory.
 		If you type: ls (you will see the two files you just created)
 		
-4)	Now that we created a new directory to store our newly created files we need to add and commit them.
+4) Now that we created a new directory to store our newly created files we need to add and commit them.
 	
 	- Before we do anything we must type: git init (in our new directory to create a repository)
 		Type: git status ( if we do not receive any errors we have properly set up a repository locally)
